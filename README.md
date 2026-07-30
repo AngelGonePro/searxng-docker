@@ -58,17 +58,22 @@ Full layout:
 
 ```
 searxng-tor/
-├── docker-compose.yml
 ├── .env
-├── searxng/
+├── docker-compose.yml
+├── update.sh
+├── proxy/
+│   └── Caddyfile
+├── rotator/
 │   ├── Dockerfile
-│   ├── entrypoint.sh
-│   ├── render.py
-│   ├── settings.template.yml
-│   └── engines.json
-└── updater/
+│   └── rotate.sh
+└── searxng/
     ├── Dockerfile
-    └── update.sh
+    ├── entrypoint.sh
+    ├── render.py
+    ├── inject_style.py
+    ├── custom-cosmoscraft.css
+    ├── settings.template.yml
+    └── limiter.toml
 ```
 
 Before you run it: set PROJECT_DIR in .env to the actual absolute path where you clone/place this folder on the Linode/host (e.g. /home/angel/searxng-tor). That's required — the updater runs docker compose against the host daemon from inside its own container, so bind mounts have to resolve against real host paths, not container-relative ones. I switched the searxng service's config mount to use ${PROJECT_DIR} too so both invocation paths (you running compose by hand, and the updater running it) resolve identically.
