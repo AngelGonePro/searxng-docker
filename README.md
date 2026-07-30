@@ -60,7 +60,12 @@ Full layout:
 searxng-tor/
 ├── docker-compose.yml
 ├── .env
-├── searxng/settings.yml
+├── searxng/
+│   ├── Dockerfile
+│   ├── entrypoint.sh
+│   ├── render.py
+│   ├── settings.template.yml
+│   └── engines.json
 └── updater/
     ├── Dockerfile
     └── update.sh
