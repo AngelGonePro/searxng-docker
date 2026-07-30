@@ -13,11 +13,19 @@ find . -maxdepth 2 -type f
 
 should print exactly:
 
+./rotator/Dockerfile
+./rotator/rotate.sh
+./proxy/Caddyfile
+./searxng/Dockerfile
+./searxng/settings.template.yml
+./searxng/entrypoint.sh
+./searxng/inject_style.py
+./searxng/render.py
+./searxng/limiter.toml
+./searxng/custom-cosmoscraft.css
+./update.sh
 ./.env
 ./docker-compose.yml
-./searxng/settings.yml
-./updater/Dockerfile
-./updater/update.sh
 
 ---
 
