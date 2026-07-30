@@ -21,6 +21,17 @@ should print exactly:
 
 ---
 
+openssl rand -hex 32
+
+gives you a new SEARXNG_SECRET.
+
+bash
+openssl rand -hex 20
+
+gives you a new TOR_CONTROL_PASSWORD.
+
+---
+
 Full layout:
 
 ```
