@@ -1,4 +1,4 @@
-curl the zip
+curl the zip - https://raw.githubusercontent.com/AngelGonePro/searxng-docker/refs/heads/main/searxng-tor.zip
 
 Full layout:
 
